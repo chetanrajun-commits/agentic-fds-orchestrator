@@ -1,1 +1,26 @@
+================================================================================
+AGENTIC INTERFACE ENGINE & MULTI-AGENT STATE GRAPH
+================================================================================
+
+[FDS Developer Hub / Backstage Platform]
+               │
+               ▼  (Triggers custom workspace orchestration schema)
+[Orchestration Engine: LangGraph State Machine Router]
+               │
+               ├─────────────────────────┼─────────────────────────┐
+               ▼                         ▼                         ▼
+   [Scaffolding Agent]           [Testing Agent]           [FinOps Agent]
+   - Parse client parameters     - Run PyTest/Docker checks- Trace AWS EKS tags
+   - Compile K8s manifests       - Intercept compilation   - Validate resource
+   - Push to staging environment   logs on failure           ceilings per tenant
+               │                         │                         │
+               └─────────────────────────┼─────────────────────────┘
+                                         ▼
+                        [Patch Remediation Logic Engine]
+                        - Vectorize logs via Pinecone
+                        - Apply context window limits
+                        - Auto-generate Git patch branch
+                                         │
+                                         ▼
+                        [Canary Deployment & Istio Mesh]
 
