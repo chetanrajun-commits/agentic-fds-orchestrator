@@ -1,7 +1,6 @@
 # agentic-fds-orchestrator
 Design paradigms and system topology for an "Agentic Infrastructure Engine"
 # Agentic FDS Orchestration Engine (System Architecture Blueprint)
-A multi-agent pipeline that takes a tenant spec (YAML), auto-generates Kubernetes manifests, validates them against FinOps policy, and if validation fails, an LLM/rule-based remediation agent patches the manifests and re-runs. This is a reference implementation of a self-healing infrastructure pipeline.
 
 ## 📌 Architectural Overview
 This repository contains the design paradigms and system topology for an **Agentic Infrastructure Engine** designed to empower **Forward Deployed Squads (FDS)**. In high-velocity, client-facing environments, FDS teams frequently encounter long deployment timelines due to fragmented multi-tenant constraints, manual code forks, and repetitive configuration steps.
