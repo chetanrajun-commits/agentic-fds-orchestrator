@@ -1,11 +1,12 @@
 # agentic-fds-orchestrator
 Design paradigms and system topology for an "Agentic Infrastructure Engine"
 # Agentic FDS Orchestration Engine (System Architecture Blueprint)
+A multi-agent pipeline that takes a tenant spec (YAML), auto-generates Kubernetes manifests, validates them against FinOps policy, and if validation fails, an LLM/rule-based remediation agent patches the manifests and re-runs. This is a reference implementation of a self-healing infrastructure pipeline.
 
 ## 📌 Architectural Overview
 This repository contains the design paradigms and system topology for an **Agentic Infrastructure Engine** designed to empower **Forward Deployed Squads (FDS)**. In high-velocity, client-facing environments, FDS teams frequently encounter long deployment timelines due to fragmented multi-tenant constraints, manual code forks, and repetitive configuration steps.
 
-This blueprint establishes a centralized **Internal Developer Platform (IDP)** architecture utilizing a **Multi-Agent System (MAS)** loop to completely automate the Software Development Lifecycle (SDLC)—including scaffold generation, regression testing, deployment tracking, and canary promotion gates.
+This blueprint establishes a centralised **Internal Developer Platform (IDP)** architecture utilising a **Multi-Agent System (MAS)** loop to completely automate the Software Development Lifecycle (SDLC)—including scaffold generation, regression testing, deployment tracking, and canary promotion gates.
 
 ---
 
@@ -30,8 +31,8 @@ This blueprint establishes a centralized **Internal Developer Platform (IDP)** a
 ```
 
 ### 1. The Scaffolding Plane (FDS Tooling)
-* **Autonomous Workspace Provisioning:** Utilizing specialized template agents to interpret client schema requirements and instantly compile containerized runtime environments (**Docker / Kubernetes manifests**).
-* **Zero-Fork Schema Synchronization:** Centralizes client-specific compliance rules into modular profiles, removing the risk of chaotic code drift across client-facing teams.
+* **Autonomous Workspace Provisioning:** Utilizing specialized template agents to interpret client schema requirements and instantly compile containerised runtime environments (**Docker / Kubernetes manifests**).
+* **Zero-Fork Schema Synchronisation:** Centralises client-specific compliance rules into modular profiles, removing the risk of chaotic code drift across client-facing teams.
 
 ### 2. The Verification & Testing Plane (Agentic AI)
 * **Continuous CI/CD Self-Healing Loops:** Integrating specialized AI validation agents directly into execution workflows (**GitHub Actions**). 
