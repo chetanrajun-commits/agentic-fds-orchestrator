@@ -1,9 +1,0 @@
-version: "3.9"
-
-services:
-  agentic-fds:
-    build: .
-    image: agentic-fds-orchestrator:dev
-    command: ["run", "--spec", "examples/tenant-spec.yaml", "--workdir", "/tmp/out"]
-    volumes:
-      - ./out:/tmp/out
