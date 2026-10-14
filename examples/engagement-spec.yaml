@@ -1,0 +1,10 @@
+client: acme-corp
+squad: atlas
+tier: prod
+namespace: fds-acme-prod
+replicas: 3
+image: ghcr.io/acme/portfolio-api:1.4.2
+cpu_limit: "500m"
+memory_limit: "512Mi"
+data_classification: confidential
+cost_center: fds-atlas
